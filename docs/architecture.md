@@ -23,8 +23,8 @@ nothing published
 - Data stores: none selected
 - External services: target websites declared independently by each script;
   GitHub Actions is configured for validation if the repository is published.
-- Deployment targets: proposed public `FiveAcreCode/public-scripts` GitHub
-  repository and its raw static-file URLs; no remote exists yet.
+- Deployment targets: public `FiveAcreCode/public-scripts` GitHub repository and
+  its raw static-file URLs; no application host or package registry is used.
 
 ## Authority and data flow
 

@@ -20,7 +20,7 @@ metadata and publication safety but does not rewrite distributed files.
 
 | Script | Purpose | Status |
 |---|---|---|
-| [Shopify Admin Tweaks](scripts/shopify-admin/userscripts/shopify-admin-tweaks/) | Optional Shopify Admin interface adjustments | Local release candidate; not published |
+| [Shopify Admin Tweaks](scripts/shopify-admin/userscripts/shopify-admin-tweaks/) | Optional Shopify Admin interface adjustments | Published release candidate; browser acceptance pending |
 
 Each script lives in
 `scripts/<product>/<script-type>/<script-name>/` with its executable artifact

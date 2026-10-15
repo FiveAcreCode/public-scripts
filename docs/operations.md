@@ -3,7 +3,8 @@
 - Primary operator/workflow: Five Acre Code maintainers add, review, validate,
   and publish human-readable scripts on behalf of Hanson Core LLC.
 - Local-only or hosted: development and validation are local; released files
-  are intended for a public GitHub repository but no remote exists yet.
+  are distributed from the public `FiveAcreCode/public-scripts` repository and
+  its raw-file endpoints.
 - Supported command: `npm test` performs read-only structure and metadata
   validation.
 - Script entry points: static `.user.js` files under

@@ -2,7 +2,8 @@
 
 Observed: 2026-10-15
 
-Status: first userscript prepared locally; nothing published
+Status: public repository and first release candidate published; browser
+acceptance pending
 
 ## Classification
 
@@ -10,8 +11,8 @@ Status: first userscript prepared locally; nothing published
 - Relationship: Five Acre Code public offering operated by Hanson Core LLC
 - Kind: static script collection with local Node.js validation tooling
 - Lifecycle: incubation
-- Tracking: local Git repository; `FiveAcreCode/public-scripts` remote planned
-  but not created
+- Tracking: local Git repository synchronized with the public
+  `FiveAcreCode/public-scripts` repository
 
 ## Verified local state
 
@@ -27,14 +28,20 @@ Status: first userscript prepared locally; nothing published
 - The Five Acre Code GitHub organization exists on the Free plan, requires 2FA,
   restricts repository creation to owners, and has hard-stop `$0` budgets for
   Actions, Packages, Codespaces, and Git LFS.
-- No GitHub repository, remote, deployment, publication, production access, or
-  Shopify mutation exists yet.
+- `FiveAcreCode/public-scripts` is public with `main` as its default branch,
+  successful GitHub Actions validation, required `test` status checks, linear
+  history, force-push and deletion protection, and private vulnerability
+  reporting.
+- The Shopify Admin Tweaks raw install/update endpoint is public. No GitHub
+  Pages site, package publication, production access, or Shopify mutation was
+  introduced.
 
 ## Current focus
 
 - Complete source and browser acceptance for Shopify Admin Tweaks.
-- Review the local repository and separately authorize creation of the public
-  `FiveAcreCode/public-scripts` repository before pushing.
+- Keep the published release-candidate label until installation, behavior,
+  persistence, update, uninstall, and reset checks pass in a disposable browser
+  profile.
 
 ## Blockers and inputs
 

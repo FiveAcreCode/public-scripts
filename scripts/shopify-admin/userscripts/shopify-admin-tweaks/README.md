@@ -9,9 +9,8 @@ supported by Shopify.
 
 ## Status
 
-The script is a local release candidate. Its declared GitHub installation URL
-will not work until `FiveAcreCode/public-scripts` is deliberately created and
-published. Browser acceptance remains pending.
+Version `0.5.0` is published from `FiveAcreCode/public-scripts` as a release
+candidate. Browser acceptance remains pending.
 
 ## Permissions and data behavior
 
@@ -30,7 +29,7 @@ limited.
 
 ## Install
 
-After the public repository is authorized and created, open the
+Open the
 [raw userscript](https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks/shopify-admin-tweaks.user.js)
 with Tampermonkey or another compatible userscript manager. Review the requested
 site access before confirming installation.

@@ -5,7 +5,7 @@
 Do not disclose an exploitable issue, credential, or affected user in a public
 issue. Once this repository is public, use its private GitHub Security Advisory
 reporting flow. Until that channel exists, report the issue privately to the
-repository owner through an established Hanson Core LLC contact.
+repository owner through an established Five Acre Code contact.
 
 Include the affected script and version, the minimum reproduction, likely
 impact, and whether the issue is already public. Do not include real customer

@@ -1,8 +1,8 @@
 {
-  "name": "@hansoncorellc/public-scripts",
+  "name": "@fiveacrecode/public-scripts",
   "version": "0.1.0",
   "private": true,
-  "description": "Validation tooling for Hanson Core LLC public userscripts.",
+  "description": "Validation tooling for Five Acre Code public userscripts.",
   "type": "module",
   "engines": {
     "node": ">=22"

@@ -5,16 +5,16 @@ import { validateSource } from './validate-userscripts.mjs';
 
 const relativePath = 'scripts/example/example.user.js';
 const rawUrl =
-  'https://raw.githubusercontent.com/hansoncorellc/public-scripts/main/' +
+  'https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/' +
   relativePath;
 
 function sourceWith(overrides = '') {
   return `// ==UserScript==
 // @name         Example helper
-// @namespace    https://github.com/hansoncorellc/public-scripts
+// @namespace    https://fiveacrecode.com/
 // @version      1.0.0
 // @description  Demonstrates valid repository metadata.
-// @author       Hanson Core LLC
+// @author       Five Acre Code
 // @license      MIT
 // @match        https://example.com/account/*
 // @grant        none
@@ -55,4 +55,11 @@ test('rejects content that resembles a private key', () => {
   const errors = validateSource(source, relativePath);
 
   assert.ok(errors.some((error) => error.includes('credential or private key')));
+});
+
+test('rejects invalid JavaScript syntax', () => {
+  const source = sourceWith().replace('})();', '(()');
+  const errors = validateSource(source, relativePath);
+
+  assert.ok(errors.some((error) => error.includes('JavaScript syntax error')));
 });

@@ -2,12 +2,13 @@ import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import { pathToFileURL } from 'node:url';
+import { Script } from 'node:vm';
 
 const repositoryRoot = path.resolve(import.meta.dirname, '..');
 const scriptsRoot = path.join(repositoryRoot, 'scripts');
-const namespace = 'https://github.com/hansoncorellc/public-scripts';
+const namespace = 'https://fiveacrecode.com/';
 const rawBase =
-  'https://raw.githubusercontent.com/hansoncorellc/public-scripts/main/';
+  'https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/';
 const requiredOnce = [
   'name',
   'namespace',
@@ -115,6 +116,12 @@ export function validateSource(source, relativePath) {
   const parsed = parseMetadata(source, relativePath);
   errors.push(...parsed.errors, ...validateMetadata(parsed.metadata, relativePath));
 
+  try {
+    new Script(source, { filename: relativePath });
+  } catch (error) {
+    errors.push(`${relativePath}: JavaScript syntax error: ${error.message}`);
+  }
+
   if (!source.endsWith('\n')) {
     errors.push(`${relativePath}: file must end with a newline`);
   }
@@ -150,6 +157,6 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   } else if (fileCount === 0) {
     console.log('No published userscripts found; repository structure is valid.');
   } else {
-    console.log(`Validated ${fileCount} published userscript(s).`);
+    console.log(`Validated ${fileCount} userscript(s).`);
   }
 }

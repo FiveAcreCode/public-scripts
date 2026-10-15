@@ -5,7 +5,7 @@ readable artifacts installed by users; there is no generated release bundle.
 
 ## Before the repository is public
 
-- Confirm `hansoncorellc/public-scripts` is the intended permanent owner/name.
+- Confirm `FiveAcreCode/public-scripts` is the intended permanent owner/name.
 - Create the repository as public only with explicit authorization.
 - Enable private vulnerability reporting and branch protection in GitHub.
 - Confirm commit author names and email addresses are appropriate for a public
@@ -19,8 +19,8 @@ readable artifacts installed by users; there is no generated release bundle.
 2. Set both update fields to the raw URL for the file on `main`:
 
    ```text
-   // @downloadURL https://raw.githubusercontent.com/hansoncorellc/public-scripts/main/scripts/<name>/<name>.user.js
-   // @updateURL   https://raw.githubusercontent.com/hansoncorellc/public-scripts/main/scripts/<name>/<name>.user.js
+   // @downloadURL https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/<name>/<name>.user.js
+   // @updateURL   https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/<name>/<name>.user.js
    ```
 
 3. Run `npm test` and review the entire diff.

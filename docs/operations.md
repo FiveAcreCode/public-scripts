@@ -1,7 +1,7 @@
 # Public Scripts operations
 
-- Primary operator/workflow: Hanson Core LLC maintainers add, review, validate,
-  and publish human-readable scripts.
+- Primary operator/workflow: Five Acre Code maintainers add, review, validate,
+  and publish human-readable scripts on behalf of Hanson Core LLC.
 - Local-only or hosted: development and validation are local; released files
   are intended for a public GitHub repository but no remote exists yet.
 - Supported command: `npm test` performs read-only structure and metadata
@@ -17,7 +17,8 @@
   per script without logging secrets or page data.
 - Backup/restore/rollback: Git history is the source of truth. Correct a release
   with a new version; removing a file cannot remove already-installed copies.
-- Support owner: Hanson Core LLC; public support channels are not established.
+- Support owner: Five Acre Code, operated by Hanson Core LLC; public support
+  channels are not established.
 
 Every repeated run should expose its inputs, target, observation/execution time,
 result, partial failures, and whether state changed. A failed read must not

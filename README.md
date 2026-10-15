@@ -1,7 +1,7 @@
 # Public Scripts
 
-Small, auditable browser userscripts and other scripts offered publicly by
-Hanson Core LLC.
+Small, auditable browser userscripts and other scripts offered publicly by Five
+Acre Code, a brand operated by Hanson Core LLC.
 
 The repository is intentionally simple: each published userscript is a static
 `.user.js` file under [`scripts/`](scripts/), with no build step required for
@@ -15,9 +15,14 @@ does not rewrite distributed files.
 2. Open the raw `.user.js` file for the script you want.
 3. Review the requested site access and privileges before confirming install.
 
-There are no installable scripts yet. The first script should be added as
-`scripts/<script-name>/<script-name>.user.js` with a neighboring README that
-explains what it does, what it can access, and how to verify it.
+## Scripts
+
+| Script | Purpose | Status |
+|---|---|---|
+| [Shopify Admin Oddities](scripts/shopify-admin-oddities/) | Optional controls for Shopify Admin interface oddities | Local release candidate; not published |
+
+Each script lives in `scripts/<script-name>/` with the installable `.user.js`
+file and documentation describing its access and behavior.
 
 ## Repository layout
 

@@ -18,7 +18,7 @@ site and behavior.
 | Check | Command | When required |
 |---|---|---|
 | Repository and metadata validation | `npm test` | Every change |
-| Syntax check | Included in `npm test` for the repository validator; each userscript must also parse during manual install | Script or tooling changes |
+| Syntax check | Included in `npm test` for the repository validator and every `.user.js` file | Script or tooling changes |
 | Build/package | Not applicable; tracked `.user.js` files are the artifacts | Revisit before adding a build step |
 | Install/update test | Disposable browser profile and non-sensitive test account/data | Every script release |
 | Behavior and uninstall test | Per-script README procedure on every declared site/browser | Every script release |

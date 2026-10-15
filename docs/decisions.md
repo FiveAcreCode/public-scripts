@@ -21,17 +21,18 @@ Do not use this file as a chronological activity log.
 - Consequence: the committed release file is authoritative; all browser and
   target-site compatibility testing is script-specific.
 
-## 2026-10-15 - Use organization-scoped identity and MIT licensing
+## 2026-10-15 - Separate public brand from legal ownership
 
-- Decision: prepare the namespace and raw update URLs for the proposed public
-  repository `hansoncorellc/public-scripts` and license repository-authored code
-  under MIT.
-- Context: organization ownership provides durable provenance and maintenance
-  continuity for scripts publicly offered by the business. MIT permits broad
-  reuse while retaining attribution and the warranty disclaimer.
-- Consequence: changing repository ownership or name after publication would
-  require coordinating install/update URLs. No GitHub repository is created by
-  this decision; publication still needs explicit authorization.
+- Decision: publish under the Five Acre Code brand and proposed GitHub
+  organization repository `FiveAcreCode/public-scripts`; retain Hanson Core LLC
+  as copyright/legal owner and license repository-authored code under MIT.
+- Context: Five Acre Code is the public-facing work while Hanson Core LLC is the
+  operating legal entity. The brand owns the namespace and presentation; the
+  legal entity retains rights and responsibility.
+- Consequence: scripts use `https://fiveacrecode.com/` as their namespace and
+  the proposed organization raw URLs for installation/update. Changing those
+  URLs after publication requires coordination. No GitHub repository is created
+  by this decision; publication still needs explicit authorization.
 
 ## 2026-10-15 - Keep release validation dependency-free
 

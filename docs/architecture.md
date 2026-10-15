@@ -6,8 +6,8 @@ Status: implemented repository foundation; no distributed scripts yet
 
 - Intended outcome: distribute small scripts as static, readable files that
   users can inspect, install, and update without a hosted application.
-- Primary users or operators: Hanson Core LLC maintainers and people choosing
-  to install an offered script.
+- Primary users or operators: Five Acre Code maintainers and people choosing to
+  install an offered script; Hanson Core LLC is the legal owner.
 - Explicitly out of scope: a hosted application, backend, database, account
   system, undisclosed telemetry, credential storage, and generated/minified
   release artifacts.
@@ -21,7 +21,7 @@ Status: implemented repository foundation; no distributed scripts yet
 - Data stores: none selected
 - External services: target websites declared independently by each script;
   GitHub Actions is configured for validation if the repository is published.
-- Deployment targets: proposed public `hansoncorellc/public-scripts` GitHub
+- Deployment targets: proposed public `FiveAcreCode/public-scripts` GitHub
   repository and its raw static-file URLs; no remote exists yet.
 
 ## Authority and data flow

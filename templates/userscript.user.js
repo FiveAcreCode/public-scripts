@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Replace with a clear script name
-// @namespace    https://github.com/hansoncorellc/public-scripts
+// @namespace    https://fiveacrecode.com/
 // @version      0.1.0
 // @description  Replace with one sentence describing visible behavior.
-// @author       Hanson Core LLC
+// @author       Five Acre Code
 // @license      MIT
 // @match        https://example.com/*
 // @grant        none

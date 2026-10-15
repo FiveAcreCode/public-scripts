@@ -6,8 +6,9 @@ stable pointers; put evolving and project-specific guidance here.
 
 ## Purpose and boundary
 
-This repository houses small, publicly distributed scripts, initially browser
-userscripts. Files under `scripts/` are installed code, so readability,
+This repository houses small scripts publicly distributed by Five Acre Code,
+initially browser userscripts. Hanson Core LLC is the legal owner. Files under
+`scripts/` are installed code, so readability,
 least-privilege metadata, provenance, and reviewability take priority over
 clever abstractions or build tooling. Do not add a web UI, backend, database,
 telemetry, remote write, or new publishing service unless a concrete script

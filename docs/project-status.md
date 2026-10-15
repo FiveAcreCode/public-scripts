@@ -2,15 +2,16 @@
 
 Observed: 2026-10-15
 
-Status: repository foundation ready; no scripts published
+Status: first userscript prepared locally; nothing published
 
 ## Classification
 
 - Ownership: Hanson Core LLC
-- Relationship: organization-owned public offering
+- Relationship: Five Acre Code public offering operated by Hanson Core LLC
 - Kind: static script collection with local Node.js validation tooling
 - Lifecycle: incubation
-- Tracking: local Git repository; public GitHub remote proposed but not created
+- Tracking: local Git repository; `FiveAcreCode/public-scripts` remote planned
+  but not created
 
 ## Verified local state
 
@@ -20,15 +21,19 @@ Status: repository foundation ready; no scripts published
 - Static distribution, contribution, security, and publication policies are
   documented.
 - `npm test` validates repository structure and published userscript metadata.
-- No userscript, GitHub remote, deployment, publication, infrastructure,
-  production access, or external-system mutation exists yet.
+- Shopify Admin Oddities `0.5.0` is present as a local release candidate with
+  permissions, data behavior, limitations, and acceptance documented.
+- The Five Acre Code GitHub organization exists on the Free plan, requires 2FA,
+  restricts repository creation to owners, and has hard-stop `$0` budgets for
+  Actions, Packages, Codespaces, and Git LFS.
+- No GitHub repository, remote, deployment, publication, production access, or
+  Shopify mutation exists yet.
 
 ## Current focus
 
-- Add the first bounded, reviewable userscript and its per-script README.
-- Decide whether to create `hansoncorellc/public-scripts` as a public GitHub
-  repository, then verify organization policy and public commit identity before
-  pushing.
+- Complete source and browser acceptance for Shopify Admin Oddities.
+- Review the local repository and separately authorize creation of the public
+  `FiveAcreCode/public-scripts` repository before pushing.
 
 ## Blockers and inputs
 
@@ -36,10 +41,11 @@ Status: repository foundation ready; no scripts published
   static files.
 - Runtime/framework: browser JavaScript for userscripts; Node.js 22 or newer for
   repository validation only.
-- External systems and authorized environments: each script must name its
-  target sites; none are authorized yet.
-- Acceptance evidence: local `npm test`, full source review, and a documented
-  install/behavior/update test for each script.
+- External systems and authorized environments: Shopify Admin Oddities targets
+  `https://admin.shopify.com/*`; browser acceptance should use a disposable
+  profile and non-sensitive test data.
+- Acceptance evidence: local `npm test` and syntax validation plus pending
+  browser installation, behavior, persistence, update, and uninstall tests.
 
 Update this file from current source and owning authorities. A plan, commit, or
 tag is not proof of a live deployment.

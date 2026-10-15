@@ -12,7 +12,7 @@ after reading the distributed file.
 3. Keep `@match` entries as narrow as possible and declare every privilege with
    `@grant`. Do not request access in anticipation of future use.
 4. Set `@downloadURL` and `@updateURL` to the raw URL of the same file on the
-   `main` branch.
+   `main` branch under `FiveAcreCode/public-scripts`.
 5. Run `npm test` and manually test installation and behavior in a disposable
    browser profile on non-sensitive data.
 

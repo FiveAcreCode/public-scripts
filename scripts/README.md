@@ -1,6 +1,10 @@
 # Published scripts
 
-No scripts have been published yet.
+## Catalog
+
+| Script | Purpose | Status |
+|---|---|---|
+| [Shopify Admin Oddities](shopify-admin-oddities/) | Optional Shopify Admin interface controls | Local release candidate; not published |
 
 Each script gets its own kebab-case directory containing:
 

@@ -23,6 +23,9 @@ readable artifacts installed by users; there is no generated release bundle.
    // @updateURL   https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/<product>/userscripts/<name>/<name>.user.js
    ```
 
+   Also set `@homepageURL` to the script's GitHub Pages landing page and
+   `@supportURL` to the repository issue tracker.
+
 3. Run `npm test` and review the entire diff.
 4. Have a second person review permissions, data handling, network calls, and
    target-site behavior when a script touches authenticated pages.

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Five Acre Code</title>
+  <polygon points="156,304 256,354 256,419 156,369" fill="#161b20"/>
+  <polygon points="256,354 356,304 356,369 256,419" fill="#2c323a"/>
+  <polygon points="156,304 256,254 356,304 256,354" fill="#20252b"/>
+  <polygon points="156,224 256,274 256,339 156,289" fill="#1e5740"/>
+  <polygon points="256,274 356,224 356,289 256,339" fill="#3a8b68"/>
+  <polygon points="156,224 256,174 356,224 256,274" fill="#2e7d5b"/>
+  <polygon points="156,144 256,194 256,259 156,209" fill="#abb0aa"/>
+  <polygon points="256,194 356,144 356,209 256,259" fill="#d7dad5"/>
+  <polygon points="156,144 256,94 356,144 256,194" fill="#c9cdc8"/>
+</svg>

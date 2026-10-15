@@ -55,3 +55,23 @@ Do not use this file as a chronological activity log.
 - Consequence: the first artifact lives under `shopify-admin/userscripts/`.
   Shopify Admin Oddities was renamed Shopify Admin Tweaks before publication
   so its name describes the optional UI adjustments it provides.
+
+## 2026-10-15 - Publish a dependency-free GitHub Pages catalog
+
+- Decision: publish `site/` through GitHub Pages as a static catalog with a
+  dedicated landing page for each public script.
+- Context: forum readers and other prospective users need a plain-language,
+  trustworthy page before opening a raw install URL. The repository README
+  remains the source-oriented entry point.
+- Consequence: the site uses no framework, analytics, cookies, remote assets,
+  form handling, or runtime data. Repository validation keeps visible versions,
+  install URLs, and local assets synchronized with the distributed script.
+
+## 2026-10-15 - Use GitHub for public support
+
+- Decision: use structured GitHub Issues for public bugs and feature requests,
+  and private vulnerability reporting for security issues.
+- Context: a public tool needs a support path that does not solicit store access
+  or encourage disclosure of protected merchant data.
+- Consequence: issue forms require environment and reproduction details plus a
+  privacy confirmation; `SUPPORT.md` routes security reports separately.

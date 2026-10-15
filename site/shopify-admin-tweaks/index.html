@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#154b37">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'"
+    >
+    <meta
+      name="description"
+      content="A free Tampermonkey userscript that hides Shopify Admin's floating Work with Sidekick prompt."
+    >
+    <link
+      rel="canonical"
+      href="https://fiveacrecode.github.io/public-scripts/shopify-admin-tweaks/"
+    >
+    <link rel="icon" href="../assets/five-acre-code-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/site.js" defer></script>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Five Acre Code">
+    <meta property="og:title" content="Shopify Admin Tweaks">
+    <meta
+      property="og:description"
+      content="Hide the floating Work with Sidekick prompt. Free, open source, and built for Tampermonkey."
+    >
+    <meta
+      property="og:url"
+      content="https://fiveacrecode.github.io/public-scripts/shopify-admin-tweaks/"
+    >
+    <title>Shopify Admin Tweaks · Five Acre Code</title>
+  </head>
+  <body>
+    <header class="site-header shell">
+      <a class="brand" href="../" aria-label="Five Acre Code Public Scripts home">
+        <img src="../assets/five-acre-code-mark.svg" alt="">
+        <span>Five Acre Code / Public Scripts</span>
+      </a>
+      <a
+        class="nav-link"
+        href="https://github.com/FiveAcreCode/public-scripts/tree/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks"
+      >View source</a>
+    </header>
+
+    <main>
+      <section class="hero shell">
+        <div>
+          <p class="eyebrow">Free Shopify Admin userscript</p>
+          <h1>Put Sidekick away when you need the space.</h1>
+          <p class="hero-copy">
+            Shopify Admin Tweaks adds one small browser control that hides the
+            floating <strong>Work with Sidekick</strong> prompt—and brings it
+            back whenever you want it.
+          </p>
+          <div class="actions">
+            <a
+              class="button button-primary"
+              href="https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks/shopify-admin-tweaks.user.js"
+            >Install with Tampermonkey</a>
+            <a
+              class="button button-secondary"
+              href="https://github.com/FiveAcreCode/public-scripts/tree/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks"
+            >Read the source</a>
+          </div>
+          <p class="meta-line">Free · Open source · MIT licensed · Version 0.6.0</p>
+        </div>
+
+        <div class="demo-wrap">
+          <div class="admin-demo" data-demo>
+            <div class="demo-browser" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="demo-layout">
+              <aside class="demo-sidebar" aria-hidden="true">
+                <div class="demo-store">Example store</div>
+                <div class="demo-nav">
+                  <span>Home</span>
+                  <span>Orders</span>
+                  <span>Products</span>
+                  <span class="active">Flow</span>
+                </div>
+              </aside>
+              <div class="demo-canvas" aria-hidden="true">
+                <p class="demo-kicker">Flow / Workflow</p>
+                <h2>Customer created</h2>
+                <div class="flow-card">
+                  <p class="flow-label">Action</p>
+                  <strong>Send internal email</strong>
+                  <span class="add-variable">Add variable</span>
+                </div>
+                <div class="demo-sidekick">
+                  <span class="demo-sidekick-icon">✦</span>
+                  <span>Work with Sidekick</span>
+                </div>
+              </div>
+            </div>
+            <div class="demo-controls">
+              <div>
+                <strong>Hide Sidekick prompt</strong>
+                <small data-demo-status aria-live="polite">The floating prompt is visible.</small>
+              </div>
+              <button
+                class="demo-toggle"
+                type="button"
+                aria-label="Toggle the Sidekick prompt in this demonstration"
+                aria-pressed="false"
+                data-demo-toggle
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div class="trust-grid shell">
+          <div class="trust-item">
+            <strong>No Shopify app install</strong>
+            <span>Runs through your browser's userscript manager.</span>
+          </div>
+          <div class="trust-item">
+            <strong>No network requests</strong>
+            <span>The script does not send page or store data anywhere.</span>
+          </div>
+          <div class="trust-item">
+            <strong>No telemetry</strong>
+            <span>No analytics, tracking pixels, or remote code.</span>
+          </div>
+          <div class="trust-item">
+            <strong>Readable source</strong>
+            <span>The installed file is the same source published on GitHub.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="install">
+        <div class="section-heading">
+          <p class="eyebrow">Install in three steps</p>
+          <h2>A local fix, not another Shopify app.</h2>
+          <p>
+            The script changes only what your browser displays. It does not
+            change your theme, store configuration, Shopify data, or staff
+            permissions.
+          </p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">1</span>
+            <h3>Install a userscript manager</h3>
+            <p>
+              Use
+              <a href="https://www.tampermonkey.net/">Tampermonkey</a> or
+              another compatible userscript manager in your desktop browser.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">2</span>
+            <h3>Install Shopify Admin Tweaks</h3>
+            <p>
+              Open the install link and review its narrow Shopify Admin access
+              before confirming.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">3</span>
+            <h3>Use the local toggle</h3>
+            <p>
+              Open the Five Acre Code control in Shopify Admin and switch the
+              floating Sidekick prompt off or on.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell">
+        <div class="section-heading">
+          <p class="eyebrow">What it can access</p>
+          <h2>Small scope, stated plainly.</h2>
+          <p>
+            Browser userscripts execute on the pages they match. Review the
+            complete source before installing any script on an authenticated
+            admin page—including this one.
+          </p>
+        </div>
+        <div class="facts">
+          <article class="fact">
+            <h3>Page access</h3>
+            <p><code>https://admin.shopify.com/*</code> only.</p>
+          </article>
+          <article class="fact">
+            <h3>Privileges</h3>
+            <p><code>@grant none</code>. No privileged Tampermonkey APIs.</p>
+          </article>
+          <article class="fact">
+            <h3>Local storage</h3>
+            <p>Saves only the panel and visibility preferences in your browser.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell">
+        <div class="callout">
+          <div>
+            <h2>Hide the prompt. Keep your workspace.</h2>
+            <p>
+              Install the free script, review every line, and turn the floating
+              Sidekick field back on whenever you need it.
+            </p>
+          </div>
+          <a
+            class="button"
+            href="https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks/shopify-admin-tweaks.user.js"
+          >Install Shopify Admin Tweaks</a>
+        </div>
+      </section>
+
+      <aside class="disclosure shell">
+        Shopify Admin Tweaks is an independent Five Acre Code project. It is not
+        affiliated with, endorsed by, or supported by Shopify. Shopify can
+        change Admin markup without notice; if the control stops working,
+        disable the script and report the affected page without sharing store or
+        customer data.
+      </aside>
+    </main>
+
+    <footer class="site-footer shell">
+      <span>Five Acre Code is a brand operated by Hanson Core LLC.</span>
+      <div class="footer-links">
+        <a href="https://github.com/FiveAcreCode/public-scripts">Source</a>
+        <a href="https://github.com/FiveAcreCode/public-scripts/issues">Support</a>
+        <a href="https://github.com/FiveAcreCode/public-scripts/blob/main/LICENSE">MIT License</a>
+      </div>
+    </footer>
+  </body>
+</html>

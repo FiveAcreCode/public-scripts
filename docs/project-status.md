@@ -2,8 +2,9 @@
 
 Observed: 2026-10-15
 
-Status: public repository and first release candidate published; browser
-acceptance pending
+Status: public repository live; Shopify Admin Tweaks `0.6.0` and GitHub Pages
+presentation prepared for publication; live deployment and browser acceptance
+pending
 
 ## Classification
 
@@ -22,9 +23,10 @@ acceptance pending
 - Static distribution, contribution, security, and publication policies are
   documented.
 - `npm test` validates repository structure and published userscript metadata.
-- Shopify Admin Tweaks `0.5.0` is present in the product-first
-  `scripts/shopify-admin/userscripts/` hierarchy as a local release candidate
-  with permissions, data behavior, limitations, and acceptance documented.
+- Shopify Admin Tweaks `0.6.0` is prepared in the product-first
+  `scripts/shopify-admin/userscripts/` hierarchy with current Sidekick field
+  and floating-ribbon targeting, homepage/support metadata, permissions, data
+  behavior, limitations, and acceptance documented.
 - The Five Acre Code GitHub organization exists on the Free plan, requires 2FA,
   restricts repository creation to owners, and has hard-stop `$0` budgets for
   Actions, Packages, Codespaces, and Git LFS.
@@ -32,13 +34,16 @@ acceptance pending
   successful GitHub Actions validation, required `test` status checks, linear
   history, force-push and deletion protection, and private vulnerability
   reporting.
-- The Shopify Admin Tweaks raw install/update endpoint is public. No GitHub
-  Pages site, package publication, production access, or Shopify mutation was
-  introduced.
+- GitHub Pages is enabled with HTTPS for the repository. A dependency-free
+  catalog, Shopify Admin Tweaks landing page, and deployment workflow are
+  prepared locally; the first site deployment remains pending.
+- The existing raw install/update endpoint is public. No package publication,
+  production access, or Shopify mutation was introduced.
 
 ## Current focus
 
-- Complete source and browser acceptance for Shopify Admin Tweaks.
+- Publish and verify the `0.6.0` raw artifact and GitHub Pages URLs.
+- Complete live browser acceptance for Shopify Admin Tweaks.
 - Keep the published release-candidate label until installation, behavior,
   persistence, update, uninstall, and reset checks pass in a disposable browser
   profile.

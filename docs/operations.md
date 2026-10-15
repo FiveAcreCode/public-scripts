@@ -5,22 +5,24 @@
 - Local-only or hosted: development and validation are local; released files
   are distributed from the public `FiveAcreCode/public-scripts` repository and
   its raw-file endpoints.
-- Supported command: `npm test` performs read-only structure and metadata
-  validation.
+- Supported command: `npm test` performs read-only structure, metadata, and
+  public-site validation.
 - Script entry points: static `.user.js` files under
   `scripts/<product>/userscripts/<script>/`; each one must document its own
   browser/runtime support and manual verification.
 - Mutating/destructive modes: repository tooling has none. Installing,
   enabling, or removing a userscript is an explicit end-user action.
-- Scheduling/trigger: local validation is manual; the included GitHub Actions
-  workflow runs on proposed pushes and pull requests after publication.
+- Scheduling/trigger: local validation is manual; GitHub Actions validates
+  proposed pushes and pull requests, and deploys `site/` to GitHub Pages when
+  the public-site source changes on `main`.
 - Observability and failure reporting: validation prints every file-level error
   and returns a non-zero exit code. Script runtime behavior must be documented
   per script without logging secrets or page data.
 - Backup/restore/rollback: Git history is the source of truth. Correct a release
   with a new version; removing a file cannot remove already-installed copies.
-- Support owner: Five Acre Code, operated by Hanson Core LLC; public support
-  channels are not established.
+- Support owner: Five Acre Code, operated by Hanson Core LLC; public bugs and
+  feature requests use GitHub Issues, while vulnerabilities use private
+  security reporting.
 
 Every repeated run should expose its inputs, target, observation/execution time,
 result, partial failures, and whether state changed. A failed read must not

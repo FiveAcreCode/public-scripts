@@ -1,23 +1,24 @@
 # Shopify Admin Tweaks
 
-Shopify Admin Tweaks adds a small Five Acre Code control panel to Shopify Admin
-for optional interface adjustments. Version `0.5.0` currently provides one
-control: hide or show Shopify's floating Sidekick field.
+Shopify Admin Tweaks is a free, open-source userscript that adds a small Five
+Acre Code control panel to Shopify Admin. Version `0.6.0` provides one control:
+hide or show Shopify's floating **Work with Sidekick** prompt.
 
 This project is independent and is not affiliated with, endorsed by, or
 supported by Shopify.
 
 ## Status
 
-Version `0.5.0` is published from `FiveAcreCode/public-scripts` as a release
-candidate. Browser acceptance remains pending.
+Version `0.6.0` is published from `FiveAcreCode/public-scripts`. Automated
+source, metadata, and publication checks pass; live Shopify Admin browser
+acceptance remains pending.
 
 ## Permissions and data behavior
 
 - Runs only on `https://admin.shopify.com/*` at `document-idle`.
 - Uses `@grant none`; it receives no privileged Tampermonkey APIs.
-- Adds a local control panel and hides elements marked with Shopify's Sidekick
-  data attribute when the option is enabled.
+- Adds a local control panel and hides Shopify's current Sidekick field and
+  floating ribbon selectors when the option is enabled.
 - Stores panel-open and Sidekick visibility preferences in the Shopify Admin
   origin's `localStorage` under `fac-shopify-admin-tweaks`.
 - Makes no network requests and includes no analytics, telemetry, credentials,
@@ -29,16 +30,17 @@ limited.
 
 ## Install
 
-Open the
+Install Tampermonkey or another compatible userscript manager, then open the
 [raw userscript](https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks/shopify-admin-tweaks.user.js)
-with Tampermonkey or another compatible userscript manager. Review the requested
-site access before confirming installation.
+and review the requested site access before confirming installation. The
+[public landing page](https://fiveacrecode.github.io/public-scripts/shopify-admin-tweaks/)
+provides a plain-language overview before installation.
 
 ## Use
 
 1. Open Shopify Admin.
 2. Select the circular Five Acre Code control at the bottom-right of the page.
-3. Toggle **Hide Sidekick**.
+3. Toggle **Hide Sidekick prompt**.
 
 The preference persists in that browser for the Shopify Admin origin. Click
 outside the panel or press `Escape` to close it.
@@ -63,6 +65,13 @@ localStorage.removeItem('fac-shopify-admin-tweaks');
   disposable browser profile with non-sensitive test data.
 
 ## Changelog
+
+### 0.6.0
+
+- Targeted the floating `Work with Sidekick` ribbon in the refreshed Shopify
+  Admin in addition to Sidekick fields.
+- Renamed the toggle to describe the floating prompt more clearly.
+- Added public homepage and support metadata.
 
 ### 0.5.0
 

@@ -16,6 +16,8 @@ const requiredOnce = [
   'description',
   'author',
   'license',
+  'homepageURL',
+  'supportURL',
   'downloadURL',
   'updateURL',
 ];
@@ -102,6 +104,21 @@ export function validateMetadata(metadata, relativePath) {
     if (values(key)[0] !== expectedRawUrl) {
       errors.push(`${relativePath}: @${key} must be ${expectedRawUrl}`);
     }
+  }
+
+  const scriptName = relativePath.split('/')[3];
+  const expectedHomepage =
+    `https://fiveacrecode.github.io/public-scripts/${scriptName}/`;
+  if (values('homepageURL')[0] !== expectedHomepage) {
+    errors.push(
+      `${relativePath}: @homepageURL must be ${expectedHomepage}`,
+    );
+  }
+
+  const expectedSupport =
+    'https://github.com/FiveAcreCode/public-scripts/issues';
+  if (values('supportURL')[0] !== expectedSupport) {
+    errors.push(`${relativePath}: @supportURL must be ${expectedSupport}`);
   }
 
   if (values('require').length > 0) {

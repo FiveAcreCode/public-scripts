@@ -1,4 +1,4 @@
-# Public Scripts
+# Five Acre Code Public Scripts
 
 Small, auditable browser userscripts and other scripts offered publicly by Five
 Acre Code, a brand operated by Hanson Core LLC.
@@ -8,6 +8,26 @@ The repository is intentionally simple: public artifacts live under
 and then by script type. Each published userscript is a static `.user.js` file
 with no build step required for installation. Repository tooling validates
 metadata and publication safety but does not rewrite distributed files.
+
+## Featured tool
+
+### Shopify Admin Tweaks
+
+A free userscript for Tampermonkey and compatible userscript managers. It adds
+a small control to Shopify Admin that can hide the floating **Work with
+Sidekick** prompt when it obstructs the interface.
+
+[**Learn more and install**](https://fiveacrecode.github.io/public-scripts/shopify-admin-tweaks/)
+· [Review the source](scripts/shopify-admin/userscripts/shopify-admin-tweaks/shopify-admin-tweaks.user.js)
+· [Report a problem](https://github.com/FiveAcreCode/public-scripts/issues)
+
+- Runs only on `https://admin.shopify.com/*`.
+- Requests no privileged userscript APIs (`@grant none`).
+- Makes no network requests and includes no analytics or telemetry.
+- Stores only the display preference in Shopify Admin's local browser storage.
+
+Shopify Admin Tweaks is independent and is not affiliated with, endorsed by, or
+supported by Shopify.
 
 ## Install a userscript
 
@@ -20,7 +40,7 @@ metadata and publication safety but does not rewrite distributed files.
 
 | Script | Purpose | Status |
 |---|---|---|
-| [Shopify Admin Tweaks](scripts/shopify-admin/userscripts/shopify-admin-tweaks/) | Optional Shopify Admin interface adjustments | Published release candidate; browser acceptance pending |
+| [Shopify Admin Tweaks](scripts/shopify-admin/userscripts/shopify-admin-tweaks/) | Hide or show Shopify's floating Sidekick prompt | Public; live browser acceptance pending |
 
 Each script lives in
 `scripts/<product>/<script-type>/<script-name>/` with its executable artifact
@@ -34,6 +54,7 @@ and documentation describing access, behavior, and installation.
 - `tools/` contains repository validation; it is never shipped to users.
 - `docs/` records architecture, operations, security, validation, and release
   policy.
+- `site/` is the dependency-free source published through GitHub Pages.
 
 ## Work locally
 

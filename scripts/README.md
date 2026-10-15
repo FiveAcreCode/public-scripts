@@ -16,7 +16,7 @@ be a browser userscript.
 
 | Product | Contents |
 |---|---|---|
-| [Shopify Admin](shopify-admin/) | Optional tools for the Shopify Admin interface |
+| [Shopify Admin](shopify-admin/) | Optional tools for the Shopify Admin interface, including [Shopify Admin Tweaks](https://fiveacrecode.github.io/public-scripts/shopify-admin-tweaks/) |
 
 Each individual script gets a kebab-case directory containing its executable
 artifact and a `README.md`. For a userscript, that means:

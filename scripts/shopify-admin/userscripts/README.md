@@ -8,7 +8,7 @@ declared access, and documented data behavior.
 
 | Userscript | Purpose | Status |
 |---|---|---|
-| [Shopify Admin Tweaks](shopify-admin-tweaks/) | Optional controls for Shopify Admin interface behavior | Published release candidate; browser acceptance pending |
+| [Shopify Admin Tweaks](shopify-admin-tweaks/) | Hide or show Shopify's floating Sidekick prompt; [public install page](https://fiveacrecode.github.io/public-scripts/shopify-admin-tweaks/) | Public; live browser acceptance pending |
 
 Each userscript directory contains the exact `.user.js` file distributed to
 users and a README covering installation, permissions, storage, limitations,

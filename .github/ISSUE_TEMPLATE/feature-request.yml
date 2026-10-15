@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest a focused improvement to an existing public script.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: script
+    attributes:
+      label: Script
+      placeholder: Shopify Admin Tweaks
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Explain the workflow problem without including protected store data.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current workaround

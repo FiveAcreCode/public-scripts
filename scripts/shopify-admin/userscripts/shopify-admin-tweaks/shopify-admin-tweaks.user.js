@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Shopify Admin Tweaks
 // @namespace    https://fiveacrecode.com/
-// @version      0.5.0
+// @version      0.6.0
 // @description  Small Shopify Admin control panel for optional UI tweaks.
 // @author       Five Acre Code
 // @license      MIT
+// @homepageURL  https://fiveacrecode.github.io/public-scripts/shopify-admin-tweaks/
+// @supportURL   https://github.com/FiveAcreCode/public-scripts/issues
 // @match        https://admin.shopify.com/*
 // @grant        none
 // @run-at       document-idle
@@ -41,10 +43,13 @@
     /*
      * Sidekick
      *
-     * Uses Shopify's data attribute rather than its generated CSS classes.
-     * This keeps working if Shopify replaces/re-renders the component.
+     * Shopify currently uses a data attribute for Sidekick fields and a
+     * generated GlobalRibbonContainer class for the floating prompt. The class
+     * fallback can change when Shopify updates Admin, so both are kept narrow.
      */
-    html.fac-hide-sidekick [data-sidekick-field="true"] {
+    html.fac-hide-sidekick [data-sidekick-field],
+    html.fac-hide-sidekick div[class^="_GlobalRibbonContainer"],
+    html.fac-hide-sidekick div[class*=" _GlobalRibbonContainer"] {
       display: none !important;
     }
 
@@ -287,9 +292,9 @@
 
       <div class="fac-row">
         <div class="fac-label">
-          <div>Hide Sidekick</div>
+          <div>Hide Sidekick prompt</div>
           <div class="fac-description">
-            Hide Shopify's floating Sidekick control
+            Hide Shopify's floating Sidekick field
           </div>
         </div>
 
@@ -297,7 +302,7 @@
           <input
             id="fac-hide-sidekick"
             type="checkbox"
-            aria-label="Hide Shopify Sidekick"
+            aria-label="Hide Shopify's floating Sidekick field"
           >
           <span class="fac-slider"></span>
         </label>

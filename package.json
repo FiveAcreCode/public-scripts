@@ -8,7 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "check": "node tools/validate-userscripts.mjs",
+    "check": "node tools/validate-userscripts.mjs && node tools/validate-site.mjs",
     "test": "node --test tools/*.test.mjs && npm run check"
   }
 }

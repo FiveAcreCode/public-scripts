@@ -17,17 +17,18 @@ site and behavior.
 
 | Check | Command | When required |
 |---|---|---|
-| Repository and metadata validation | `npm test` | Every change |
+| Repository, metadata, and public-site validation | `npm test` | Every change |
 | Syntax check | Included in `npm test` for the repository validator and every `.user.js` file | Script or tooling changes |
 | Build/package | Not applicable; tracked `.user.js` files are the artifacts | Revisit before adding a build step |
 | Install/update test | Disposable browser profile and non-sensitive test account/data | Every script release |
 | Behavior and uninstall test | Per-script README procedure on every declared site/browser | Every script release |
 
-The common validator checks required metadata, semantic versions, stable raw
+The common validators check required metadata, semantic versions, stable raw
 URLs, organization namespace, narrow site matches, declared grants, newline
-discipline, unsupported external dependencies, and several common credential
-patterns. It does not prove that a script is benign, compatible, or correct.
-Review the full distributed source and its effective page/network permissions.
+discipline, unsupported external dependencies, common credential patterns,
+landing-page version/install consistency, and static asset references. They do
+not prove that a script is benign, compatible, or correct. Review the full
+distributed source and its effective page/network permissions.
 
 ## Handoff evidence
 

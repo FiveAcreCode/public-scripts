@@ -1,7 +1,7 @@
 # Public Scripts architecture
 
-Status: implemented repository foundation and first local release candidate;
-nothing published
+Status: public repository and first userscript published; static presentation
+site implemented for GitHub Pages
 
 ## Purpose and boundaries
 
@@ -9,22 +9,23 @@ nothing published
   users can inspect, install, and update without a hosted application.
 - Primary users or operators: Five Acre Code maintainers and people choosing to
   install an offered script; Hanson Core LLC is the legal owner.
-- Explicitly out of scope: a hosted application, backend, database, account
-  system, undisclosed telemetry, credential storage, and generated/minified
-  release artifacts.
+- Explicitly out of scope: a hosted application runtime, backend, database,
+  account system, undisclosed telemetry, credential storage, and
+  generated/minified release artifacts.
 
 ## System shape
 
 - Runtime/framework: plain browser JavaScript for distributed userscripts;
   dependency-free Node.js 22+ validation for maintainers.
 - Source entry points: `scripts/**/*.user.js` for releases, organized as
-  `scripts/<product>/<script-type>/<script>/`, and
-  `tools/validate-userscripts.mjs` for validation.
+  `scripts/<product>/<script-type>/<script>/`; `site/` for dependency-free
+  public presentation; and `tools/validate-*.mjs` for validation.
 - Data stores: none selected
 - External services: target websites declared independently by each script;
-  GitHub Actions is configured for validation if the repository is published.
-- Deployment targets: public `FiveAcreCode/public-scripts` GitHub repository and
-  its raw static-file URLs; no application host or package registry is used.
+  GitHub Actions validates source and deploys the static presentation site.
+- Deployment targets: public `FiveAcreCode/public-scripts` GitHub repository,
+  raw static-file URLs, and GitHub Pages; no application runtime or package
+  registry is used.
 
 ## Authority and data flow
 
@@ -34,10 +35,11 @@ which executes it only on declared `@match` pages. Any page data, network call,
 or mutation is script-specific and must be documented next to that script.
 
 Repository validation reads committed files and emits process output only. It
-has no network access and performs no writes. The validator prevents missing
+has no network access and performs no writes. The validators prevent missing
 release metadata, organization/URL drift, broad all-site matches, external
-`@require` dependencies without a decision, and several common credential
-patterns; human source review remains the release authority.
+`@require` dependencies without a decision, common credential patterns, and
+landing-page version/install drift; human source review remains the release
+authority.
 
 ## Constraints
 

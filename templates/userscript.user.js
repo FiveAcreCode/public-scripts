@@ -5,6 +5,8 @@
 // @description  Replace with one sentence describing visible behavior.
 // @author       Five Acre Code
 // @license      MIT
+// @homepageURL  https://fiveacrecode.github.io/public-scripts/replace-with-script-name/
+// @supportURL   https://github.com/FiveAcreCode/public-scripts/issues
 // @match        https://example.com/*
 // @grant        none
 // @run-at       document-idle

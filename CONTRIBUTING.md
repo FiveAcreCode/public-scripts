@@ -15,8 +15,9 @@ after reading the distributed file.
    manual test steps.
 4. Keep `@match` entries as narrow as possible and declare every privilege with
    `@grant`. Do not request access in anticipation of future use.
-5. Set `@downloadURL` and `@updateURL` to the raw URL of the same file on the
-   `main` branch under `FiveAcreCode/public-scripts`.
+5. Set `@homepageURL` to the script's public landing page, `@supportURL` to the
+   repository issue tracker, and both `@downloadURL` and `@updateURL` to the
+   raw URL of the same file on the `main` branch.
 6. Run `npm test` and manually test installation and behavior in a disposable
    browser profile on non-sensitive data.
 

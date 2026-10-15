@@ -17,6 +17,8 @@ function sourceWith(overrides = '') {
 // @description  Demonstrates valid repository metadata.
 // @author       Five Acre Code
 // @license      MIT
+// @homepageURL  https://fiveacrecode.github.io/public-scripts/example-helper/
+// @supportURL   https://github.com/FiveAcreCode/public-scripts/issues
 // @match        https://example.com/account/*
 // @grant        none
 // @downloadURL  ${rawUrl}

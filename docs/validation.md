@@ -1,7 +1,8 @@
 # Public Scripts validation
 
-Validation must match risk and prove the requested outcome. Replace the
-placeholders below when the runtime and first task are selected.
+Validation covers the repository foundation and metadata common to every
+published userscript. Each script must add manual acceptance for its target
+site and behavior.
 
 ## Always
 
@@ -16,11 +17,17 @@ placeholders below when the runtime and first task are selected.
 
 | Check | Command | When required |
 |---|---|---|
-| Format/lint | `TODO` | Relevant source changes |
-| Type/static analysis | `TODO` | Relevant source changes |
-| Unit/integration tests | `TODO` | Behavior changes |
-| Build/package | `TODO` | Before handoff or release candidate |
-| Live/visual acceptance | `TODO` | Only in an explicitly authorized environment |
+| Repository and metadata validation | `npm test` | Every change |
+| Syntax check | Included in `npm test` for the repository validator; each userscript must also parse during manual install | Script or tooling changes |
+| Build/package | Not applicable; tracked `.user.js` files are the artifacts | Revisit before adding a build step |
+| Install/update test | Disposable browser profile and non-sensitive test account/data | Every script release |
+| Behavior and uninstall test | Per-script README procedure on every declared site/browser | Every script release |
+
+The common validator checks required metadata, semantic versions, stable raw
+URLs, organization namespace, narrow site matches, declared grants, newline
+discipline, unsupported external dependencies, and several common credential
+patterns. It does not prove that a script is benign, compatible, or correct.
+Review the full distributed source and its effective page/network permissions.
 
 ## Handoff evidence
 

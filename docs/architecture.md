@@ -1,30 +1,47 @@
 # Public Scripts architecture
 
-Status: initial boundary; update after implementation choices are verified
+Status: implemented repository foundation; no distributed scripts yet
 
 ## Purpose and boundaries
 
-- Intended outcome: `TODO`
-- Primary users or operators: `TODO`
-- Explicitly out of scope: `TODO`
+- Intended outcome: distribute small scripts as static, readable files that
+  users can inspect, install, and update without a hosted application.
+- Primary users or operators: Hanson Core LLC maintainers and people choosing
+  to install an offered script.
+- Explicitly out of scope: a hosted application, backend, database, account
+  system, undisclosed telemetry, credential storage, and generated/minified
+  release artifacts.
 
 ## System shape
 
-- Runtime/framework: `TODO`
-- Source entry points: `TODO`
+- Runtime/framework: plain browser JavaScript for distributed userscripts;
+  dependency-free Node.js 22+ validation for maintainers.
+- Source entry points: `scripts/**/*.user.js` for releases and
+  `tools/validate-userscripts.mjs` for validation.
 - Data stores: none selected
-- External services: none selected
-- Deployment targets: none selected
+- External services: target websites declared independently by each script;
+  GitHub Actions is configured for validation if the repository is published.
+- Deployment targets: proposed public `hansoncorellc/public-scripts` GitHub
+  repository and its raw static-file URLs; no remote exists yet.
 
 ## Authority and data flow
 
-Document each material input, output, data class, source of truth, trust
-boundary, and failure mode. Keep credentials and protected data out of this
-file.
+The committed `.user.js` file is both source and distributed artifact. A user
+reviews its declared permissions and installs it into a userscript manager,
+which executes it only on declared `@match` pages. Any page data, network call,
+or mutation is script-specific and must be documented next to that script.
+
+Repository validation reads committed files and emits process output only. It
+has no network access and performs no writes. The validator prevents missing
+release metadata, organization/URL drift, broad all-site matches, external
+`@require` dependencies without a decision, and several common credential
+patterns; human source review remains the release authority.
 
 ## Constraints
 
 - Preserve repository-local conventions and current source truth.
-- Separate local, development, staging, and production identities.
+- Keep install/update URLs stable after the first publication.
+- Prefer plain source over bundling; add dependencies only through a recorded
+  security decision.
 - Record consequential architecture changes in [decisions.md](decisions.md).
 - Do not describe planned components as implemented.

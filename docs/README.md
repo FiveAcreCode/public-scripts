@@ -10,6 +10,7 @@ Start with [agent-startup.md](agent-startup.md) for agent instructions and
 | [architecture.md](architecture.md) | Implemented boundaries and material technical decisions |
 | [decisions.md](decisions.md) | Durable project decisions with context and consequences |
 | [validation.md](validation.md) | Commands and evidence required before handoff |
+| [publishing.md](publishing.md) | Public-repository and userscript release procedure |
 | [template-origin.md](template-origin.md) | Starter type, version, provenance, and update policy |
 | [tasks/](tasks/README.md) | Bounded project work items when detailed task docs are useful |
 

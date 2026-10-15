@@ -1,0 +1,14 @@
+{
+  "name": "@hansoncorellc/public-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Validation tooling for Hanson Core LLC public userscripts.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node tools/validate-userscripts.mjs",
+    "test": "node --test tools/*.test.mjs && npm run check"
+  }
+}

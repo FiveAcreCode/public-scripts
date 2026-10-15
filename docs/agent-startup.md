@@ -6,10 +6,12 @@ stable pointers; put evolving and project-specific guidance here.
 
 ## Purpose and boundary
 
-The tool's operator, workflow, runtime, data, integrations, and operational
-state belong in [project-status.md](project-status.md) and current source. Do not
-add a web UI, cloud service, database, or automation unless the actual workflow
-requires it.
+This repository houses small, publicly distributed scripts, initially browser
+userscripts. Files under `scripts/` are installed code, so readability,
+least-privilege metadata, provenance, and reviewability take priority over
+clever abstractions or build tooling. Do not add a web UI, backend, database,
+telemetry, remote write, or new publishing service unless a concrete script
+requires it and the decision is documented first.
 
 ## Knowledge hierarchy
 
@@ -31,6 +33,12 @@ requires it.
 
 ## Implementation and operations
 
+- Treat every `.user.js` file under `scripts/` as a public release artifact.
+- Keep userscript `@match` and `@grant` declarations narrowly aligned with
+  implemented behavior and disclose network/data behavior in its README.
+- Increment script versions for every published behavior change; never rely on
+  rewriting a version users may already have installed.
+- Do not minify or obfuscate distributed source.
 - Make read-only/reporting paths incapable of mutation.
 - Require an explicit mode, target, and confirmation boundary for destructive
   or external writes; provide dry-run/preview when meaningful.
@@ -57,4 +65,5 @@ require the request to authorize that action and exact target.
 | Commands, scheduling, side effects, recovery | `docs/operations.md` |
 | Data, credentials, privacy, retention | `docs/data-and-security.md` |
 | Validation | `docs/validation.md` and executable project commands |
+| Add or release a script | `CONTRIBUTING.md` and `docs/publishing.md` |
 | Update agent guidance | This file only |

@@ -1,21 +1,21 @@
 // ==UserScript==
-// @name         Shopify Admin Oddities
+// @name         Shopify Admin Tweaks
 // @namespace    https://fiveacrecode.com/
 // @version      0.5.0
-// @description  Small Shopify Admin control panel for UI oddities.
+// @description  Small Shopify Admin control panel for optional UI tweaks.
 // @author       Five Acre Code
 // @license      MIT
 // @match        https://admin.shopify.com/*
 // @grant        none
 // @run-at       document-idle
-// @downloadURL  https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin-oddities/shopify-admin-oddities.user.js
-// @updateURL    https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin-oddities/shopify-admin-oddities.user.js
+// @downloadURL  https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks/shopify-admin-tweaks.user.js
+// @updateURL    https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks/shopify-admin-tweaks.user.js
 // ==/UserScript==
 
 (function () {
   'use strict';
 
-  const KEY = 'fac-shopify-admin-oddities';
+  const KEY = 'fac-shopify-admin-tweaks';
 
   let stored = {};
 

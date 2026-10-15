@@ -6,8 +6,9 @@
   are intended for a public GitHub repository but no remote exists yet.
 - Supported command: `npm test` performs read-only structure and metadata
   validation.
-- Script entry points: static `.user.js` files under `scripts/`; each one must
-  document its own browser/runtime support and manual verification.
+- Script entry points: static `.user.js` files under
+  `scripts/<product>/userscripts/<script>/`; each one must document its own
+  browser/runtime support and manual verification.
 - Mutating/destructive modes: repository tooling has none. Installing,
   enabling, or removing a userscript is an explicit end-user action.
 - Scheduling/trigger: local validation is manual; the included GitHub Actions

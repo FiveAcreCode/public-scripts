@@ -43,3 +43,15 @@ Do not use this file as a chronological activity log.
   easier to audit and reduce supply-chain exposure.
 - Consequence: maintainers run `npm test`; project-specific behavior still
   requires human review and manual browser testing.
+
+## 2026-10-15 - Organize scripts by product, then script type
+
+- Decision: place public artifacts under
+  `scripts/<product>/<script-type>/<script>/`, with a catalog README at each
+  product and script-type level.
+- Context: the repository may eventually contain several script formats for
+  several products. Product-first navigation keeps related tools together,
+  while the type level preserves distinct installation and validation rules.
+- Consequence: the first artifact lives under `shopify-admin/userscripts/`.
+  Shopify Admin Oddities was renamed Shopify Admin Tweaks before publication
+  so its name describes the optional UI adjustments it provides.

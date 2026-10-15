@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { validateSource } from './validate-userscripts.mjs';
+import { validatePath, validateSource } from './validate-userscripts.mjs';
 
-const relativePath = 'scripts/example/example.user.js';
+const relativePath =
+  'scripts/example-product/userscripts/example-helper/example-helper.user.js';
 const rawUrl =
   'https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/' +
   relativePath;
@@ -30,6 +31,20 @@ ${overrides}// ==/UserScript==
 
 test('accepts a narrowly scoped, self-hosted userscript', () => {
   assert.deepEqual(validateSource(sourceWith(), relativePath), []);
+});
+
+test('requires the product-first userscript hierarchy', () => {
+  const errors = validatePath('scripts/example/example.user.js');
+
+  assert.ok(errors.some((error) => error.includes('userscript path must match')));
+});
+
+test('requires the artifact name to match its script directory', () => {
+  const errors = validatePath(
+    'scripts/example-product/userscripts/example-helper/different.user.js',
+  );
+
+  assert.ok(errors.some((error) => error.includes('filename must be')));
 });
 
 test('rejects an all-sites match and external runtime dependency', () => {

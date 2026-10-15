@@ -1,6 +1,7 @@
 # Public Scripts architecture
 
-Status: implemented repository foundation; no distributed scripts yet
+Status: implemented repository foundation and first local release candidate;
+nothing published
 
 ## Purpose and boundaries
 
@@ -16,7 +17,8 @@ Status: implemented repository foundation; no distributed scripts yet
 
 - Runtime/framework: plain browser JavaScript for distributed userscripts;
   dependency-free Node.js 22+ validation for maintainers.
-- Source entry points: `scripts/**/*.user.js` for releases and
+- Source entry points: `scripts/**/*.user.js` for releases, organized as
+  `scripts/<product>/<script-type>/<script>/`, and
   `tools/validate-userscripts.mjs` for validation.
 - Data stores: none selected
 - External services: target websites declared independently by each script;

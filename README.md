@@ -3,10 +3,11 @@
 Small, auditable browser userscripts and other scripts offered publicly by Five
 Acre Code, a brand operated by Hanson Core LLC.
 
-The repository is intentionally simple: each published userscript is a static
-`.user.js` file under [`scripts/`](scripts/), with no build step required for
-installation. Repository tooling validates metadata and publication safety but
-does not rewrite distributed files.
+The repository is intentionally simple: public artifacts live under
+[`scripts/`](scripts/), grouped first by the product or platform they affect
+and then by script type. Each published userscript is a static `.user.js` file
+with no build step required for installation. Repository tooling validates
+metadata and publication safety but does not rewrite distributed files.
 
 ## Install a userscript
 
@@ -19,14 +20,16 @@ does not rewrite distributed files.
 
 | Script | Purpose | Status |
 |---|---|---|
-| [Shopify Admin Oddities](scripts/shopify-admin-oddities/) | Optional controls for Shopify Admin interface oddities | Local release candidate; not published |
+| [Shopify Admin Tweaks](scripts/shopify-admin/userscripts/shopify-admin-tweaks/) | Optional Shopify Admin interface adjustments | Local release candidate; not published |
 
-Each script lives in `scripts/<script-name>/` with the installable `.user.js`
-file and documentation describing its access and behavior.
+Each script lives in
+`scripts/<product>/<script-type>/<script-name>/` with its executable artifact
+and documentation describing access, behavior, and installation.
 
 ## Repository layout
 
-- `scripts/` contains released, human-readable scripts and per-script docs.
+- `scripts/` contains product-first catalogs and released, human-readable
+  scripts. See its [structure guide](scripts/README.md).
 - `templates/` contains the starting point for a new userscript.
 - `tools/` contains repository validation; it is never shipped to users.
 - `docs/` records architecture, operations, security, validation, and release

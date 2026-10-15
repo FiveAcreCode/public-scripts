@@ -111,8 +111,39 @@ export function validateMetadata(metadata, relativePath) {
   return errors;
 }
 
-export function validateSource(source, relativePath) {
+export function validatePath(relativePath) {
   const errors = [];
+  const parts = relativePath.split('/');
+  const expected =
+    'scripts/<product>/userscripts/<script>/<script>.user.js';
+
+  if (
+    parts.length !== 5 ||
+    parts[0] !== 'scripts' ||
+    parts[2] !== 'userscripts'
+  ) {
+    return [`${relativePath}: userscript path must match ${expected}`];
+  }
+
+  const [, product, , script, filename] = parts;
+  const kebabCase = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+  if (!kebabCase.test(product)) {
+    errors.push(`${relativePath}: product directory must use kebab-case`);
+  }
+  if (!kebabCase.test(script)) {
+    errors.push(`${relativePath}: script directory must use kebab-case`);
+  }
+  if (filename !== `${script}.user.js`) {
+    errors.push(
+      `${relativePath}: userscript filename must be ${script}.user.js`,
+    );
+  }
+
+  return errors;
+}
+
+export function validateSource(source, relativePath) {
+  const errors = validatePath(relativePath);
   const parsed = parseMetadata(source, relativePath);
   errors.push(...parsed.errors, ...validateMetadata(parsed.metadata, relativePath));
 

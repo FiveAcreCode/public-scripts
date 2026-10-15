@@ -1,8 +1,8 @@
-# Shopify Admin Oddities
+# Shopify Admin Tweaks
 
-Shopify Admin Oddities adds a small Five Acre Code control panel to Shopify
-Admin for optional interface adjustments. Version `0.5.0` currently provides
-one control: hide or show Shopify's floating Sidekick field.
+Shopify Admin Tweaks adds a small Five Acre Code control panel to Shopify Admin
+for optional interface adjustments. Version `0.5.0` currently provides one
+control: hide or show Shopify's floating Sidekick field.
 
 This project is independent and is not affiliated with, endorsed by, or
 supported by Shopify.
@@ -20,7 +20,7 @@ published. Browser acceptance remains pending.
 - Adds a local control panel and hides elements marked with Shopify's Sidekick
   data attribute when the option is enabled.
 - Stores panel-open and Sidekick visibility preferences in the Shopify Admin
-  origin's `localStorage` under `fac-shopify-admin-oddities`.
+  origin's `localStorage` under `fac-shopify-admin-tweaks`.
 - Makes no network requests and includes no analytics, telemetry, credentials,
   remote code, or external dependencies.
 
@@ -31,7 +31,7 @@ limited.
 ## Install
 
 After the public repository is authorized and created, open the
-[raw userscript](https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin-oddities/shopify-admin-oddities.user.js)
+[raw userscript](https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/shopify-admin/userscripts/shopify-admin-tweaks/shopify-admin-tweaks.user.js)
 with Tampermonkey or another compatible userscript manager. Review the requested
 site access before confirming installation.
 
@@ -50,7 +50,7 @@ Disable or uninstall the script through the userscript manager. To remove its
 saved preferences as well, run this in Shopify Admin's browser console:
 
 ```js
-localStorage.removeItem('fac-shopify-admin-oddities');
+localStorage.removeItem('fac-shopify-admin-tweaks');
 ```
 
 ## Known limitations and acceptance

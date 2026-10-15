@@ -19,8 +19,8 @@ readable artifacts installed by users; there is no generated release bundle.
 2. Set both update fields to the raw URL for the file on `main`:
 
    ```text
-   // @downloadURL https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/<name>/<name>.user.js
-   // @updateURL   https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/<name>/<name>.user.js
+   // @downloadURL https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/<product>/userscripts/<name>/<name>.user.js
+   // @updateURL   https://raw.githubusercontent.com/FiveAcreCode/public-scripts/main/scripts/<product>/userscripts/<name>/<name>.user.js
    ```
 
 3. Run `npm test` and review the entire diff.

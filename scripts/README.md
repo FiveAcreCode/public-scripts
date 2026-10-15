@@ -1,12 +1,25 @@
-# Published scripts
+# Public script catalog
 
-## Catalog
+Scripts are organized by the product or platform they affect, then by their
+execution or distribution type, and finally by the individual script:
 
-| Script | Purpose | Status |
+```text
+scripts/<product>/<script-type>/<script>/
+```
+
+For example, browser userscripts for Shopify Admin live under
+`scripts/shopify-admin/userscripts/`. This product-first structure keeps tools
+for the same surface together without assuming every future contribution will
+be a browser userscript.
+
+## Products
+
+| Product | Contents |
 |---|---|---|
-| [Shopify Admin Oddities](shopify-admin-oddities/) | Optional Shopify Admin interface controls | Local release candidate; not published |
+| [Shopify Admin](shopify-admin/) | Optional tools for the Shopify Admin interface |
 
-Each script gets its own kebab-case directory containing:
+Each individual script gets a kebab-case directory containing its executable
+artifact and a `README.md`. For a userscript, that means:
 
 - `<name>.user.js`: the exact static file installed by users; and
 - `README.md`: purpose, supported pages/browsers, permissions, data behavior,

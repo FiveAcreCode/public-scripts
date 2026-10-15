@@ -1,7 +1,7 @@
 # Public Scripts architecture
 
 Status: public repository and first userscript published; static presentation
-site implemented for GitHub Pages
+site deployed through GitHub Pages
 
 ## Purpose and boundaries
 

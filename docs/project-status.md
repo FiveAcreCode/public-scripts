@@ -2,9 +2,8 @@
 
 Observed: 2026-10-15
 
-Status: public repository live; Shopify Admin Tweaks `0.6.0` and GitHub Pages
-presentation prepared for publication; live deployment and browser acceptance
-pending
+Status: public repository, Shopify Admin Tweaks `0.6.0`, and GitHub Pages
+presentation live; Shopify Admin browser acceptance pending
 
 ## Classification
 
@@ -23,7 +22,7 @@ pending
 - Static distribution, contribution, security, and publication policies are
   documented.
 - `npm test` validates repository structure and published userscript metadata.
-- Shopify Admin Tweaks `0.6.0` is prepared in the product-first
+- Shopify Admin Tweaks `0.6.0` is published in the product-first
   `scripts/shopify-admin/userscripts/` hierarchy with current Sidekick field
   and floating-ribbon targeting, homepage/support metadata, permissions, data
   behavior, limitations, and acceptance documented.
@@ -34,15 +33,16 @@ pending
   successful GitHub Actions validation, required `test` status checks, linear
   history, force-push and deletion protection, and private vulnerability
   reporting.
-- GitHub Pages is enabled with HTTPS for the repository. A dependency-free
-  catalog, Shopify Admin Tweaks landing page, and deployment workflow are
-  prepared locally; the first site deployment remains pending.
-- The existing raw install/update endpoint is public. No package publication,
+- GitHub Pages is enabled with HTTPS. The dependency-free public catalog is live
+  at `https://fiveacrecode.github.io/public-scripts/`, and the Shopify Admin
+  Tweaks landing page is live under `/shopify-admin-tweaks/`.
+- GitHub Actions validation and Pages deployment passed for commit `99bab68`.
+  GitHub prerelease `v0.6.0` is published with public notes and install link.
+- The raw `0.6.0` install/update endpoint is public. No package publication,
   production access, or Shopify mutation was introduced.
 
 ## Current focus
 
-- Publish and verify the `0.6.0` raw artifact and GitHub Pages URLs.
 - Complete live browser acceptance for Shopify Admin Tweaks.
 - Keep the published release-candidate label until installation, behavior,
   persistence, update, uninstall, and reset checks pass in a disposable browser
